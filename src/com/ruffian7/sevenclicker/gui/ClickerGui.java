@@ -38,7 +38,6 @@ import javax.swing.text.DocumentFilter;
 
 import org.pushingpixels.trident.Timeline;
 
-import com.apple.eawt.Application;
 import com.ruffian7.sevenclicker.AutoClicker;
 
 public class ClickerGui {
@@ -51,13 +50,13 @@ public class ClickerGui {
 	private final Color DARK_GRAY = new Color(45, 47, 49);
 	private final Color GREEN = new Color(35, 168, 105);
 
-	public JFrame frame = new JFrame("7Clicker");
+	public JFrame frame = new JFrame("AstroClicker");
 
 	public JPanel mainPane = new JPanel(null);
 	public JPanel titleBar = new JPanel(null);
 	public JPanel dropdown = new JPanel(null);
 
-	public JLabel titleText = new JLabel("7Clicker");
+	public JLabel titleText = new JLabel("AstroClicker");
 	public JLabel cpsRange = new JLabel("CPS Range");
 	public JLabel cpsNumber = new JLabel("00");
 	public JLabel dropdownArrow = new JLabel(
@@ -67,7 +66,7 @@ public class ClickerGui {
 	public JLabel toggleKeyText = new JLabel("Toggle Button");
 
 	public JTextField minCPSField = new JTextField("8", 2);
-	public JTextField maxCPSField = new JTextField("12", 2);
+	public JTextField maxCPSField = new JTextField("10", 2);
 	public JTextField toggleKeyField = new JTextField("Mouse 3");
 
 	public JCheckBox overlayBox = new JCheckBox("Overlay", true);
@@ -96,13 +95,9 @@ public class ClickerGui {
 		frame.setAlwaysOnTop(true);
 		frame.setResizable(false);
 
-		if (System.getProperty("os.name").toLowerCase().contains("mac")) {
-			Application.getApplication().setDockIconImage(
-					new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/7Clicker.png")).getImage());
-		} else {
+
 			frame.setIconImage(
-					new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/7Clicker.png")).getImage());
-		}
+					new ImageIcon(AutoClicker.class.getClassLoader().getResource("assets/Astro.png")).getImage());
 
 		frame.addWindowFocusListener(new WindowAdapter() {
 			@Override
@@ -417,10 +412,10 @@ public class ClickerGui {
 
 			if ((isMin && slider.sliderVal1 <= slider.sliderVal2)
 					|| (!isMin && slider.sliderVal1 > slider.sliderVal2)) {
-				slider.sliderVal1 = (cpsFieldVal > 20) ? 19 : cpsFieldVal - 1;
+				slider.sliderVal1 = (cpsFieldVal > 10) ? 19 : cpsFieldVal - 1;
 				slider.sliderThumb1.x = (slider.sliderVal1 / 20.0f) * 130;
 			} else {
-				slider.sliderVal2 = (cpsFieldVal > 20) ? 19 : cpsFieldVal - 1;
+				slider.sliderVal2 = (cpsFieldVal > 10) ? 19 : cpsFieldVal - 1;
 				slider.sliderThumb2.x = (slider.sliderVal2 / 20.0f) * 130;
 			}
 

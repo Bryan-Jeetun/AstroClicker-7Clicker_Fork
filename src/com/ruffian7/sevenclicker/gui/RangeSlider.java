@@ -56,7 +56,7 @@ public class RangeSlider extends JPanel {
 					sliderRange.x = Math.min(sliderThumb1.x, sliderThumb2.x) + 5;
 					sliderRange.width = Math.max(sliderThumb1.x, sliderThumb2.x)
 							- Math.min(sliderThumb1.x, sliderThumb2.x);
-					sliderVal1 = (int) Math.round(((sliderThumb1.x + 2) / 130) * 20);
+					sliderVal1 = (int) Math.round(((sliderThumb1.x + 2) / 130) * 10);
 					AutoClicker.minCPS = Math.min(sliderVal1, sliderVal2) + 1;
 					AutoClicker.maxCPS = Math.max(sliderVal1, sliderVal2) + 1;
 					AutoClicker.gui.minCPSField.setText(String.valueOf(AutoClicker.minCPS));
@@ -67,7 +67,7 @@ public class RangeSlider extends JPanel {
 					sliderRange.x = Math.min(sliderThumb1.x, sliderThumb2.x) + 5;
 					sliderRange.width = Math.max(sliderThumb1.x, sliderThumb2.x)
 							- Math.min(sliderThumb1.x, sliderThumb2.x);
-					sliderVal2 = (int) Math.round(((sliderThumb2.x + 2) / 130) * 20);
+					sliderVal2 = (int) Math.round(((sliderThumb2.x + 2) / 130) * 10);
 					AutoClicker.minCPS = Math.min(sliderVal1, sliderVal2) + 1;
 					AutoClicker.maxCPS = Math.max(sliderVal1, sliderVal2) + 1;
 					AutoClicker.gui.minCPSField.setText(String.valueOf(AutoClicker.minCPS));
